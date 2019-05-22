@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+	int num[10], maximum, minimum, total, i;
+	float  average;
+	
+	maximum  = 0;
+	minimum = 0;
+	total = 0;
+	
+		cout << "Input a total of 10 integers:" << "\n" ;
+		
+	for (i= 0; i < 10; i++)
+	{
+		cin >> num[i];
+		total += num[i]; 
+		average = total/10;
+	}
+	
+	minimum = num[0];
+	maximum = num[0];
+
+	for (int j = 0; j < 10; j++)
+	{
+		if(maximum<num[j])
+		{
+		 maximum = num[j];
+		}
+		else if (minimum>num[j])
+		{
+		minimum = num[j];
+		}
+	}
+	cout << "\n";
+	cout << maximum << " Is The Highest Value";
+	cout << "\n";
+	cout << minimum  << " Is The Lowest Value";
+	cout << "\n";
+	cout << total << " Is The total value"; 
+	cout << "\n";
+	cout << average << " The Average of the 10 Integers";
+	
+	return 0;
+}
