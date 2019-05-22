@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char province[3] = {'A','B','C'};
+	int temperature[3][7];
+	
+	cout << "Please input temperature per province and per day" << "\n";
+	for (int x = 0; x < 3; x++)
+	{
+		for(int y = 1; y <= 7; y++)
+		{
+			cout << "Province " << province[x] << ", Day " << y << " : ";
+			cin >> temperature[x][y];
+		}
+	}
+	
+	cout << "\n";
+	
+	cout << "Showing Values:" << "\n" ; 
+	for (int x = 0; x < 3; x++)
+	{
+		for(int y = 1; y <= 7; y++)
+		{
+			cout << "Province " << province[x] << ", Day " << y << " : ";
+			cout << temperature[x][y] << "\n";
+		}
+	}
+	
+	return 0;
+}
