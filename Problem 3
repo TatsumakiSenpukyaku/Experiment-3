@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n, kid; 
+	char arr[50];
+	
+	n = 7;
+	
+	cout << "Please input 7 elements:" << "\n" ;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];		
+	}
+	cout <<"\n";
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << ", ";
+	}
+	cout << "\n";
+	for (int i = 0; i < n; i++)
+	{
+		for(int j = 0; j < n - i - 1; j++)
+		{
+			if (arr[j] > arr[j+1])
+			{
+				kid = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = kid;
+			}
+		}
+	}
+	cout << "\n" << "The list of the 7 elements after sorting it backwards would be: ";
+		for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << ", ";
+	}
+	
+	return 0;
+}
